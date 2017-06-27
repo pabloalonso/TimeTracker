@@ -12,11 +12,15 @@ After it reads the full file and prints the info you can ask for details of a gi
 Edit file tomcat/conf/logging.properties and add the following
 
 handlers = java.util.logging.ConsoleHandler, 1catalina.org.apache.juli.FileHandler, 2localhost.org.apache.juli.FileHandler, 3manager.org.apache.juli.FileHandler, 4host-manager.org.apache.juli.FileHandler, 5bonita.org.apache.juli.FileHandler, 6tracker.org.apache.juli.FileHandler
+
 ...
+
 6tracker.org.apache.juli.FileHandler.level = ALL
 6tracker.org.apache.juli.FileHandler.directory = ${catalina.base}/logs
 6tracker.org.apache.juli.FileHandler.prefix = tracker.
+
 ...
+
 com.bonitasoft.eventhandler.handlers = 6tracker.org.apache.juli.FileHandler
 com.bonitasoft.eventhandler.level = INFO
 
