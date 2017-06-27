@@ -10,6 +10,7 @@ After it reads the full file and prints the info you can ask for details of a gi
 
 ## Event Handlers Setup
 Edit file tomcat/conf/logging.properties and add the following
+
 handlers = java.util.logging.ConsoleHandler, 1catalina.org.apache.juli.FileHandler, 2localhost.org.apache.juli.FileHandler, 3manager.org.apache.juli.FileHandler, 4host-manager.org.apache.juli.FileHandler, 5bonita.org.apache.juli.FileHandler, 6tracker.org.apache.juli.FileHandler
 ...
 6tracker.org.apache.juli.FileHandler.level = ALL
@@ -20,6 +21,7 @@ com.bonitasoft.eventhandler.handlers = 6tracker.org.apache.juli.FileHandler
 com.bonitasoft.eventhandler.level = INFO
 
 Edit file cfg-bonita-events-api-impl-xml and add the following:
+
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
